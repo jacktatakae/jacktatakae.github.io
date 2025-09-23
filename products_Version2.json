@@ -1,0 +1,16 @@
+[
+  {
+    "id": "backup",
+    "name": "OpenBackup Fácil",
+    "description": "Proteja seus dados com backups automáticos, seguros e fáceis de configurar. Desenvolvido em Python e 100% personalizável.",
+    "image": "backup-image.png",
+    "pageUrl": "produto-backup.html"
+  },
+  {
+    "id": "chatbot",
+    "name": "Base para Chatbot de WhatsApp",
+    "description": "Crie seu próprio robô de atendimento no WhatsApp. Código aberto, flexível e com permissão para revenda.",
+    "image": "chatbot-image.png",
+    "pageUrl": "produto-chatbot.html"
+  }
+]

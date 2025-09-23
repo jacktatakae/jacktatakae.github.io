@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamuelP.dev - Soluções em Código</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">SamuelP.dev</h1>
+            <nav>
+                <a href="#produtos">Produtos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Scripts Open Source para Automatizar e Otimizar seu Negócio</h2>
+                <p>Soluções em código aberto, com permissão de revenda e suporte dedicado.</p>
+            </div>
+        </section>
+
+        <section id="produtos" class="product-showcase">
+            <div class="container">
+                <h3 class="section-title">Nossos Scripts</h3>
+                <div class="product-grid" id="product-grid">
+                    <!-- Os produtos serão carregados aqui pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato" class="contact-section">
+             <div class="container">
+                <h3 class="section-title">Ficou com alguma dúvida?</h3>
+                <p>Entre em contato diretamente comigo. Ficarei feliz em ajudar.</p>
+                <a href="https://wa.me/5511950248408" class="btn-primary" target="_blank">Chamar no WhatsApp</a>
+             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SamuelP.dev. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://github.com/jacktatakae" target="_blank">Samuel Prado</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const productGrid = document.getElementById('product-grid');
+            fetch('products.json')
+                .then(response => response.json())
+                .then(products => {
+                    productGrid.innerHTML = '';
+                    products.forEach(product => {
+                        const card = document.createElement('div');
+                        card.className = 'product-card';
+                        card.innerHTML = `
+                            <div class="product-icon">
+                                <img src="${product.image}" alt="Ícone ${product.name}" class="product-card-image">
+                            </div>
+                            <h4>${product.name}</h4>
+                            <p>${product.description}</p>
+                            <a href="${product.pageUrl}" class="btn-secondary">Ver Detalhes</a>
+                        `;
+                        productGrid.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar os produtos:', error);
+                    productGrid.innerHTML = '<p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>';
+                });
+        });
+    </script>
+
+</body>
+</html>
