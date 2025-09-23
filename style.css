@@ -1,0 +1,56 @@
+:root {
+    --bg-dark: #121212; --bg-light: #1e1e1e; --text-primary: #e0e0e0; --text-secondary: #b3b3b3;
+    --primary-color: #007bff; --primary-hover: #0056b3; --border-color: #333333; --font-family: 'Poppins', sans-serif;
+}
+body { background-color: var(--bg-dark); color: var(--text-primary); font-family: var(--font-family); margin: 0; line-height: 1.6; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.header { background-color: var(--bg-light); padding: 15px 0; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5em; font-weight: 700; color: var(--primary-color); margin: 0; }
+.logo-link { text-decoration: none; }
+.header nav a { color: var(--text-secondary); text-decoration: none; margin-left: 20px; font-weight: 400; transition: color 0.3s; }
+.header nav a:hover { color: var(--text-primary); }
+.hero { background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 1)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfGFsbHx8fHx8fHx8fDE3MTI4ODMyNjd8&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center; background-size: cover; padding: 100px 0; text-align: center; color: #fff; }
+.hero h2 { font-size: 2.5em; margin-bottom: 10px; }
+.hero p { font-size: 1.2em; font-weight: 300; max-width: 600px; margin: 0 auto; }
+.product-showcase { padding: 60px 0; }
+.section-title { text-align: center; font-size: 2em; margin-bottom: 40px; color: var(--text-primary); }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.product-card { background-color: var(--bg-light); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s, box-shadow 0.3s; }
+.product-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+.product-icon { margin-bottom: 20px; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+.product-card-image { max-height: 120px; width: auto; border-radius: 8px; }
+.product-card h4 { font-size: 1.4em; color: var(--primary-color); margin: 0 0 15px 0; }
+.product-card p { color: var(--text-secondary); margin-bottom: 25px; flex-grow: 1; }
+.btn-secondary { display: inline-block; background-color: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s, color 0.3s; }
+.btn-secondary:hover { background-color: var(--primary-color); color: #fff; }
+.contact-section { background-color: var(--bg-light); padding: 60px 0; text-align: center; }
+.btn-primary { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 1.1em; transition: background-color 0.3s; }
+.btn-primary:hover { background-color: var(--primary-hover); }
+.product-page .container { max-width: 800px; }
+.product-header { text-align: center; margin: 40px 0; }
+.product-header h2 { font-size: 2.8em; margin-bottom: 10px; }
+.product-header .subtitle { font-size: 1.2em; color: var(--text-secondary); }
+.product-media { margin-bottom: 40px; text-align: center; }
+.product-media img { max-width: 100%; max-height: 400px; width: auto; border-radius: 8px; border: 1px solid var(--border-color); }
+.cta-main { text-align: center; margin: 40px 0; }
+.hotmart__button-checkout { background-color: #28a745; color: #fff; padding: 20px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.5em; transition: transform 0.2s, background-color 0.3s; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3); display: inline-block; }
+.hotmart__button-checkout:hover { background-color: #218838; transform: scale(1.05); }
+.product-section { margin-bottom: 50px; }
+.product-section h3 { font-size: 1.8em; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 20px; }
+.product-section ul { list-style: none; padding-left: 0; }
+.product-section li { margin-bottom: 10px; font-size: 1.1em; }
+.benefits-list li { color: var(--text-secondary); }
+.benefits-list strong { color: var(--text-primary); }
+.guarantee-box { background-color: var(--bg-light); border: 2px dashed var(--primary-color); border-radius: 8px; padding: 30px; text-align: center; margin: 40px 0; }
+.guarantee-box h4 { margin: 0 0 10px 0; font-size: 1.5em; color: var(--text-primary); }
+.faq-item { margin-bottom: 20px; }
+.faq-item strong { display: block; font-size: 1.2em; margin-bottom: 5px; }
+.footer { background-color: var(--bg-light); text-align: center; padding: 20px 0; margin-top: 60px; border-top: 1px solid var(--border-color); font-size: 0.9em; color: var(--text-secondary); }
+.footer a { color: var(--primary-color); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+    .hero h2 { font-size: 2em; }
+    .product-header h2 { font-size: 2.2em; }
+    .hotmart__button-checkout { font-size: 1.2em; padding: 15px 30px; }
+}
